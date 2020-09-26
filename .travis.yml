@@ -1,0 +1,20 @@
+language: node_js
+node_js: lts/*
+cache: npm
+
+install:
+  - npm install
+
+script:
+  - npm run beforeDeploy
+
+deploy:
+  skip-cleanup: true
+  provider: heroku
+  app: $HEROKU_APP
+  api_key: $HEROKU_TOKEN
+  run: restart
+  skip_cleanup: true
+
+services:
+  - mongodb
