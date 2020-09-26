@@ -32,5 +32,10 @@
     - `HEROKU_APP` here you have to put heroku app name
     - `HEROKU_TOKEN` here you need to put the auth token whatever you get from above command
 
+  - now you need to setup one script in your package.json
+    - `"beforeDeploy": "./deploy.sh"`
+
 - if you are using public repo, and you don't want to give any personal access token of github to travis
   - for this situation you have to change the cloning url of `deploy.sh` line no. 5 and 15.
+
+
