@@ -9,7 +9,6 @@ script:
   - npm run beforeDeploy
 
 deploy:
-  skip-cleanup: true
   provider: heroku
   app: $HEROKU_APP
   api_key: $HEROKU_TOKEN
